@@ -1,0 +1,941 @@
+<!doctype html>
+<html>
+<head>
+<base target="_blank">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="FK Private Pilot Quick Reference — a one-page Pilot Vibes reference for VFR flying, checkride review, regulations, weather, airspace, navigation, communication, aircraft systems, performance, and pilot decision-making.">
+<title>FK Private Pilot Quick Reference | Pilot Vibes</title>
+<style>
+*{box-sizing:border-box}
+:root{--blue:#003b73;--blue2:#075d99;--blue3:#0c83c6;--bg:#f4f7f9;--line:#d7e0e7;--text:#1e2933;--muted:#66717d;--green:#1c7a45;--red:#a22626;--amber:#a86400}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+header{background:linear-gradient(135deg,var(--blue),var(--blue3));color:white}
+.hero{max-width:1280px;margin:auto;padding:34px 22px 26px}
+.hero h1{font-size:34px;margin:0 0 7px} .hero p{max-width:1000px;margin:0;font-size:14px;opacity:.94}
+.toolbar{position:sticky;top:0;z-index:30;background:white;border-bottom:1px solid var(--line);box-shadow:0 2px 7px rgba(0,0,0,.05)}
+.toolbar-inner{max-width:1280px;margin:auto;padding:9px 18px;display:flex;gap:9px;align-items:center}
+.toolbar label{font-size:11px;font-weight:bold;color:var(--blue);white-space:nowrap}
+.toolbar select,.toolbar input{height:38px;border:1px solid #b9c7d2;border-radius:7px;padding:0 10px;background:white;font-size:13px}
+.toolbar select{min-width:270px} .toolbar input{flex:1;min-width:120px}
+.toolbar button{height:38px;border:0;border-radius:7px;padding:0 13px;background:var(--blue2);color:white;font-weight:bold;cursor:pointer}
+main{max-width:1280px;margin:auto;padding:20px 18px 34px}
+.intro{background:white;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:17px}
+.intro h2{color:var(--blue);margin:0 0 8px;font-size:22px} .intro p{margin:0;color:var(--muted);font-size:13px}
+.index{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:15px 0 22px}
+.index a{text-decoration:none;color:var(--blue);background:white;border:1px solid var(--line);border-radius:8px;padding:10px 11px;font-size:12px;font-weight:bold}
+.index a:hover{border-color:#8eb6d0;background:#f8fbfd}
+.reference-section{scroll-margin-top:68px;background:white;border:1px solid var(--line);border-radius:12px;margin:0 0 16px;box-shadow:0 2px 8px rgba(0,0,0,.035)}
+.section-head{display:flex;gap:13px;align-items:flex-start;padding:19px 21px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#fbfcfd);border-radius:12px 12px 0 0}
+.section-num{flex:0 0 38px;height:38px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:12px}
+.section-head h2{margin:0;color:var(--blue);font-size:22px} .section-head p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.section-body{padding:19px 21px 22px} .section-body h3{color:var(--blue2);font-size:16px;margin:18px 0 8px} .section-body h3:first-child{margin-top:0}
+.section-body h4{color:var(--blue);font-size:13px;margin:0 0 6px} .section-body p,.section-body li{font-size:12.5px}
+.section-body ul,.section-body ol{margin:7px 0;padding-left:21px}
+.cols-2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px} .cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} .cols-4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.subcard{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fcfdfe}
+.metric{border:1px solid var(--line);border-radius:8px;padding:12px;background:#f9fbfc;text-align:center} .metric strong{display:block;color:var(--blue);font-size:21px;margin-bottom:4px} .metric span{font-size:11px;color:var(--muted)}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:8px} table{width:100%;border-collapse:collapse;min-width:660px} th,td{padding:8px 9px;border-bottom:1px solid #e4e9ed;text-align:left;vertical-align:top;font-size:11.5px} th{background:#f3f7fa;color:var(--blue);font-size:11px} tr:last-child td{border-bottom:0}
+.mnemonic{background:#f1f7fb;border:1px solid #c8dae7;border-radius:8px;padding:12px} .mnemonic b{display:block;color:var(--blue);font-size:16px;margin-bottom:4px} .mnemonic span{font-size:11.5px;color:#43515c}
+.mn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.callout{border-left:4px solid;padding:11px 12px;border-radius:6px;margin:12px 0;font-size:11.5px} .callout.blue{background:#edf6fc;border-color:var(--blue2)} .callout.amber{background:#fff7e9;border-color:var(--amber)} .callout.red{background:#fceeee;border-color:var(--red)}
+.code{background:#1b2d3e;color:#eef7ff;border-radius:7px;padding:11px 12px;font-family:Consolas,monospace;font-size:11.5px;margin:8px 0;white-space:pre-wrap}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px} .flow.compact{grid-template-columns:repeat(4,1fr)} .flow div{border:1px solid var(--line);border-radius:8px;padding:10px;background:#fafcfd} .flow b{display:flex;width:24px;height:24px;border-radius:50%;align-items:center;justify-content:center;background:var(--blue2);color:white;font-size:11px;margin-bottom:6px} .flow span{font-size:10.5px;color:#4e5b65}
+.arc-row{font-size:11.5px;line-height:2.2} .arc{display:inline-block;width:23px;height:10px;border-radius:3px;margin:0 4px 0 7px;vertical-align:middle} .arc.white{background:#fff;border:1px solid #777} .arc.green{background:#2f944d} .arc.yellow{background:#e5b925} .arc.red{background:#c42d2d}
+.qa details{border:1px solid var(--line);border-radius:8px;margin:7px 0;background:#fcfdfe} .qa summary{cursor:pointer;padding:11px 12px;font-weight:bold;color:var(--blue);font-size:12px} .qa details p{padding:0 12px 12px;margin:0;color:#4b5964}
+footer{max-width:1280px;margin:0 auto 25px;padding:0 18px} .foot{background:white;border:1px solid var(--line);border-radius:9px;padding:13px;text-align:center;font-size:10.5px;color:var(--muted)}
+.hidden-by-search{display:none}
+mark{background:#fff2a8;padding:0 1px}
+@media(max-width:900px){.index{grid-template-columns:repeat(2,1fr)}.cols-4,.cols-3{grid-template-columns:repeat(2,1fr)}.mn-grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.hero h1{font-size:26px}.toolbar-inner{flex-wrap:wrap}.toolbar label{display:none}.toolbar select{width:100%;min-width:0}.toolbar input{width:calc(100% - 92px)}.index,.cols-2,.cols-3,.cols-4,.mn-grid,.flow,.flow.compact{grid-template-columns:1fr}.section-head{padding:15px}.section-body{padding:15px}.section-head h2{font-size:19px}}
+@media print{body{background:white}.toolbar,.index{display:none!important}main{max-width:none;padding:0}.reference-section{box-shadow:none;break-inside:auto;margin:0 0 10px}.section-head{break-after:avoid}.section-body{padding-top:12px}a{color:inherit}}
+</style>
+</head>
+<body>
+<header><div class="hero">
+<h1>FK Private Pilot Quick Reference</h1>
+<p>Detailed checkride and VFR operations reference covering pilot qualifications, aircraft legality, weather, airspace, navigation, radio communication, airport operations, aerodynamics, performance, systems, human factors, and high-value memory aids.</p>
+</div></header>
+
+<div class="toolbar"><div class="toolbar-inner">
+<label for="jump">JUMP TO</label>
+<select id="jump" onchange="jumpToSection(this.value)">
+<option value="">Select a section…</option>
+<option value="pilot-qualifications">Pilot Qualifications & Aeronautical Experience</option>
+<option value="currency">Currency, Recency & Endorsements</option>
+<option value="medical">Medical Certificates & BasicMed</option>
+<option value="airworthiness">Airworthiness, Documents & Inspections</option>
+<option value="equipment">VFR Required Equipment & Inoperative Equipment</option>
+<option value="preflight">Preflight Action, Flight Planning & Regulations</option>
+<option value="weather-products">Weather Products & Briefings</option>
+<option value="weather-theory">Weather Theory & Hazards</option>
+<option value="airspace">National Airspace System & VFR Minimums</option>
+<option value="sectional">Sectional Chart Quick Reference</option>
+<option value="navigation">Navigation, VOR, GPS & Lost Procedures</option>
+<option value="communication">Radio Communication, ATC, Transponder & Light Gun</option>
+<option value="airport">Airport Signs, Markings, Lights & Runway Safety</option>
+<option value="aerodynamics">Aerodynamics, Turns, Stalls & Stability</option>
+<option value="performance">Performance, Airspeeds, Altitudes & V-Speeds</option>
+<option value="systems">Flight Controls, Engine, Propeller & Electrical Systems</option>
+<option value="instruments">Flight Instruments, Pitot-Static, Gyros & Glass Cockpit</option>
+<option value="night-fuel-o2">Night Definitions, VFR Fuel & Supplemental Oxygen</option>
+<option value="adm">Aeronautical Decision-Making & Risk Management</option>
+<option value="human-factors">Aeromedical Factors & Illusions</option>
+<option value="ntsb">NTSB Accident / Incident Quick Reference</option>
+<option value="mnemonics">Mnemonic & Memory-Aid Index</option>
+<option value="rapid-review">Rapid Review Questions</option>
+</select>
+<input id="search" type="search" placeholder="Search this quick reference…" oninput="searchSections()">
+<button onclick="window.print()">PRINT</button>
+</div></div>
+
+<main>
+<div class="intro">
+<h2>Quick Reference Index</h2>
+<p>All topics are expanded below in one continuous page. Use the index, jump menu, browser search, or the search box above to move quickly between subjects.</p>
+</div>
+<div class="index"><a href="#pilot-qualifications">Pilot Qualifications & Aeronautical Experience</a>
+<a href="#currency">Currency, Recency & Endorsements</a>
+<a href="#medical">Medical Certificates & BasicMed</a>
+<a href="#airworthiness">Airworthiness, Documents & Inspections</a>
+<a href="#equipment">VFR Required Equipment & Inoperative Equipment</a>
+<a href="#preflight">Preflight Action, Flight Planning & Regulations</a>
+<a href="#weather-products">Weather Products & Briefings</a>
+<a href="#weather-theory">Weather Theory & Hazards</a>
+<a href="#airspace">National Airspace System & VFR Minimums</a>
+<a href="#sectional">Sectional Chart Quick Reference</a>
+<a href="#navigation">Navigation, VOR, GPS & Lost Procedures</a>
+<a href="#communication">Radio Communication, ATC, Transponder & Light Gun</a>
+<a href="#airport">Airport Signs, Markings, Lights & Runway Safety</a>
+<a href="#aerodynamics">Aerodynamics, Turns, Stalls & Stability</a>
+<a href="#performance">Performance, Airspeeds, Altitudes & V-Speeds</a>
+<a href="#systems">Flight Controls, Engine, Propeller & Electrical Systems</a>
+<a href="#instruments">Flight Instruments, Pitot-Static, Gyros & Glass Cockpit</a>
+<a href="#night-fuel-o2">Night Definitions, VFR Fuel & Supplemental Oxygen</a>
+<a href="#adm">Aeronautical Decision-Making & Risk Management</a>
+<a href="#human-factors">Aeromedical Factors & Illusions</a>
+<a href="#ntsb">NTSB Accident / Incident Quick Reference</a>
+<a href="#mnemonics">Mnemonic & Memory-Aid Index</a>
+<a href="#rapid-review">Rapid Review Questions</a></div>
+
+<section class="reference-section" id="pilot-qualifications">
+  <div class="section-head">
+    <div class="section-num">01</div>
+    <div><h2>Pilot Qualifications & Aeronautical Experience</h2><p>Private Pilot Airplane Single-Engine Land — eligibility, experience, privileges, limitations, and PIC responsibilities.</p></div>
+  </div>
+  <div class="section-body">
+<div class="cols-2">
+  <div class="subcard">
+    <h3>Eligibility — §61.103</h3>
+    <ul>
+      <li>At least <strong>17 years old</strong>.</li>
+      <li>Read, speak, write, and understand English.</li>
+      <li>Receive the required ground/flight training and instructor endorsements.</li>
+      <li>Pass the Private Pilot knowledge test.</li>
+      <li>Meet the aeronautical experience requirements of §61.109.</li>
+      <li>Hold the appropriate student, sport, recreational, or other pilot certificate as applicable.</li>
+      <li>Hold an appropriate medical qualification or comply with BasicMed when permitted.</li>
+    </ul>
+  </div>
+  <div class="subcard">
+    <h3>PIC Responsibilities</h3>
+    <ul>
+      <li>Carry the required pilot certificate, photo identification, and medical qualification when required.</li>
+      <li>The PIC is responsible for and is the final authority over the operation of the aircraft.</li>
+      <li>The PIC is responsible for determining that the aircraft is airworthy before flight.</li>
+      <li>In an in-flight emergency, the PIC may deviate from regulations to the extent necessary to meet the emergency.</li>
+    </ul>
+  </div>
+</div>
+<h3>Aeronautical Experience — §61.109 Quick Table</h3>
+<div class="tablewrap"><table>
+<tr><th>Requirement</th><th>Minimum / Included Experience</th></tr>
+<tr><td>Total flight time</td><td>40 hours total.</td></tr>
+<tr><td>Flight training</td><td>20 hours from an authorized instructor.</td></tr>
+<tr><td>Solo</td><td>10 hours solo, including 5 hours solo cross-country.</td></tr>
+<tr><td>Cross-country training</td><td>3 hours in a single-engine airplane.</td></tr>
+<tr><td>Night training</td><td>3 hours, including a night cross-country over 100 NM total distance and 10 takeoffs and landings to a full stop.</td></tr>
+<tr><td>Instrument-reference training</td><td>3 hours controlling and maneuvering solely by reference to instruments, including the required basic instrument tasks and radio/navigation use.</td></tr>
+<tr><td>Practical-test preparation</td><td>3 hours with an authorized instructor in preparation for the practical test within the required recent period.</td></tr>
+<tr><td>Solo long cross-country</td><td>At least 150 NM total distance, full-stop landings at 3 points, with one segment more than 50 NM straight-line distance.</td></tr>
+<tr><td>Towered-airport experience</td><td>3 takeoffs and landings to a full stop at an airport with an operating control tower, each involving a traffic-pattern lap.</td></tr>
+</table></div>
+<h3>Private Pilot Privileges & Limitations — §61.113</h3>
+<div class="cols-2">
+  <div class="subcard"><h4>Common Privileges / Exceptions</h4>
+    <ul><li>Act as PIC within Private Pilot privileges.</li><li>Business/employment flight may be permitted when the flight is incidental to the business and passengers/property are not carried for compensation or hire.</li><li>Specified charitable/community flights may be permitted.</li><li>An aircraft salesperson with at least 200 hours may demonstrate an aircraft to a prospective buyer.</li><li>Other specific exceptions exist; consult the regulation for the operation planned.</li></ul>
+  </div>
+  <div class="subcard"><h4>Key Limitation</h4>
+    <p>A Private Pilot generally may not act as PIC carrying passengers or property for compensation or hire and may not pay less than the required pro-rata share of allowable operating expenses when sharing expenses with passengers.</p>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="reference-section" id="currency">
+  <div class="section-head">
+    <div class="section-num">02</div>
+    <div><h2>Currency, Recency & Endorsements</h2><p>Legal currency establishes minimum eligibility; proficiency is a separate safety consideration.</p></div>
+  </div>
+  <div class="section-body">
+<div class="cols-3">
+ <div class="metric"><strong>24</strong><span>calendar months — flight review interval unless an applicable alternative satisfies the rule.</span></div>
+ <div class="metric"><strong>90</strong><span>days — passenger takeoff/landing recency window.</span></div>
+ <div class="metric"><strong>3</strong><span>takeoffs and 3 landings for passenger-carrying recency.</span></div>
+</div>
+<h3>Passenger Currency — §61.57</h3>
+<div class="tablewrap"><table>
+<tr><th>Operation</th><th>Quick Reference</th></tr>
+<tr><td>Day passenger carrying</td><td>Within the preceding 90 days, 3 takeoffs and 3 landings as sole manipulator in the same category and class, and type when a type rating is required.</td></tr>
+<tr><td>Night passenger carrying</td><td>Within the period beginning 1 hour after sunset and ending 1 hour before sunrise: 3 takeoffs and 3 landings <strong>to a full stop</strong> within the preceding 90 days.</td></tr>
+<tr><td>Tailwheel</td><td>Passenger-currency landings must be to a full stop.</td></tr>
+</table></div>
+<h3>Common Additional Endorsements — §61.31</h3>
+<div class="tablewrap"><table>
+<tr><th>Endorsement</th><th>Applies To</th><th>Training Cue</th></tr>
+<tr><td>Tailwheel</td><td>Tailwheel airplane</td><td>Normal/crosswind takeoffs and landings, wheel landings, go-around procedures.</td></tr>
+<tr><td>Complex</td><td>Airplane with retractable landing gear, flaps, and controllable-pitch propeller</td><td>Ground and flight training plus logbook endorsement.</td></tr>
+<tr><td>High Performance</td><td>Airplane with an engine of more than 200 horsepower</td><td>Ground and flight training plus logbook endorsement.</td></tr>
+<tr><td>High Altitude</td><td>Airplane with service ceiling or max operating altitude above 25,000 ft MSL</td><td>Training includes high-altitude aerodynamics, meteorology, hypoxia, oxygen use, gas expansion/decompression and related physiology.</td></tr>
+</table></div>
+<div class="callout blue"><strong>Calendar months:</strong> the source guides emphasize that a calendar-month period runs through the end of the applicable month rather than ending on the same numbered day.</div>
+</div>
+</section>
+
+
+<section class="reference-section" id="medical">
+  <div class="section-head">
+    <div class="section-num">03</div>
+    <div><h2>Medical Certificates & BasicMed</h2><p>Know which class of privileges you are exercising and whether BasicMed may be used for the planned operation.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Medical Privilege Duration — §61.23</h3>
+<div class="tablewrap"><table>
+<tr><th>Privileges Exercised</th><th>Under Age 40</th><th>Age 40 and Over</th></tr>
+<tr><td>First-class privileges</td><td>12 calendar months</td><td>6 calendar months</td></tr>
+<tr><td>Second-class privileges</td><td>12 calendar months</td><td>12 calendar months</td></tr>
+<tr><td>Third-class / Private Pilot privileges</td><td>60 calendar months</td><td>24 calendar months</td></tr>
+</table></div>
+<h3>BasicMed — Study Summary</h3>
+<div class="cols-2">
+<div class="subcard"><h4>Pilot Requirements</h4><ul>
+<li>Possess a U.S. driver's license.</li>
+<li>Meet the qualifying prior-medical requirement described in the BasicMed rules.</li>
+<li>Complete the required medical education course every 24 calendar months.</li>
+<li>Complete the Comprehensive Medical Examination Checklist with a state-licensed physician at the required interval.</li>
+</ul></div>
+<div class="subcard"><h4>Operational / Aircraft Limits in the Guides</h4><ul>
+<li>Aircraft authorized for no more than 7 occupants.</li>
+<li>No more than 6 passengers carried.</li>
+<li>Maximum certificated takeoff weight not more than 12,500 lb.</li>
+<li>Operations below 18,000 ft and not exceeding 250 knots.</li>
+<li>Not used for compensation-or-hire operations.</li>
+</ul></div>
+</div>
+<div class="callout amber"><strong>Use current BasicMed rules for an actual flight.</strong> The uploaded guides summarize the program, but operational details should be checked against current FAA requirements.</div>
+</div>
+</section>
+
+
+<section class="reference-section" id="airworthiness">
+  <div class="section-head">
+    <div class="section-num">04</div>
+    <div><h2>Airworthiness, Documents & Inspections</h2><p>A checkride favorite: “How do you know the airplane is legal and airworthy?”</p></div>
+  </div>
+  <div class="section-body">
+<div class="mnemonic"><b>ARROW</b><span>Airworthiness Certificate • Registration • Radio Operator License (international when required) • Operating limitations / POH / placards • Weight & Balance data</span></div>
+<h3>Required Aircraft Maintenance Inspections — Memory Aid</h3>
+<div class="tablewrap"><table>
+<tr><th>Item</th><th>Common Interval / Trigger</th><th>Reference Cue</th></tr>
+<tr><td>Annual</td><td>Every 12 calendar months</td><td>§91.409</td></tr>
+<tr><td>Airworthiness Directives</td><td>Comply as applicable</td><td>Part 39 / maintenance records</td></tr>
+<tr><td>VOR check</td><td>Within preceding 30 days when required for IFR use</td><td>§91.171</td></tr>
+<tr><td>100-hour</td><td>Applies to specified for-hire / instructional operations</td><td>§91.409</td></tr>
+<tr><td>Altimeter / static system</td><td>24 calendar months when required for IFR</td><td>§91.411</td></tr>
+<tr><td>Transponder</td><td>24 calendar months</td><td>§91.413</td></tr>
+<tr><td>ELT</td><td>12 calendar months; battery replacement/recharge rules also apply</td><td>§91.207</td></tr>
+</table></div>
+<h3>Special Flight Permit — §21.197</h3>
+<p>May be issued for certain flights of an aircraft that does not currently meet applicable airworthiness requirements but is capable of safe flight, such as flying to a maintenance location, delivery/export, evacuation from impending danger, or certain production/customer demonstration circumstances described by the rule.</p>
+<h3>Preventive Maintenance</h3>
+<p>The source guides note that a certificated pilot who owns or operates an eligible aircraft may perform specified preventive-maintenance items allowed by Part 43 Appendix A, provided the operation and maintenance action meet the applicable requirements.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="equipment">
+  <div class="section-head">
+    <div class="section-num">05</div>
+    <div><h2>VFR Required Equipment & Inoperative Equipment</h2><p>Use the mnemonic as a study prompt, then verify the actual aircraft's certification basis, equipment list, POH/AFM, ADs and regulations.</p></div>
+  </div>
+  <div class="section-body">
+<div class="cols-2">
+<div>
+<h3>VFR Day — A TOMATO FLAMES</h3>
+<div class="mnemonic"><b>A TOMATO FLAMES</b><span>Altimeter • Tachometer • Oil temperature • Manifold pressure (when applicable) • Airspeed indicator • Temperature gauge (liquid-cooled) • Oil pressure • Fuel quantity • Landing gear position indicator (if applicable) • Anti-collision lights • Magnetic direction indicator • ELT • Safety belts/shoulder harnesses</span></div>
+</div>
+<div>
+<h3>VFR Night — FLAPS</h3>
+<div class="mnemonic"><b>FLAPS</b><span>Fuses/spares when applicable • Landing light if operating for hire • Anti-collision lights • Position/navigation lights • Source of electrical power</span></div>
+</div>
+</div>
+<h3>Inoperative Equipment — §91.213 Study Flow</h3>
+<div class="flow">
+<div><b>1</b><span>Is it required by an AD?</span></div>
+<div><b>2</b><span>Required by §91.205 / the operation?</span></div>
+<div><b>3</b><span>Required by VFR-day type certification, KOEL or aircraft equipment list?</span></div>
+<div><b>4</b><span>Covered by an MEL if one applies?</span></div>
+<div><b>5</b><span>If not required, deactivate/remove and placard as applicable, make required maintenance record entries, and determine the aircraft is safe.</span></div>
+</div>
+<div class="callout red"><strong>If required equipment is inoperative,</strong> the source guides emphasize that flight is not permitted unless relief is provided by the applicable approved procedure or authorization, such as an MEL or special flight permit where appropriate.</div>
+</div>
+</section>
+
+
+<section class="reference-section" id="preflight">
+  <div class="section-head">
+    <div class="section-num">06</div>
+    <div><h2>Preflight Action, Flight Planning & Regulations</h2><p>Build the flight from legal requirements outward: route, weather, fuel, runway, alternatives, performance, terrain and contingencies.</p></div>
+  </div>
+  <div class="section-body">
+<div class="mnemonic"><b>NWKRAFT — §91.103</b><span>NOTAMs • Weather reports and forecasts • Known traffic delays • Runway lengths • Alternatives • Fuel requirements • Takeoff and landing performance</span></div>
+<h3>Minimum Safe Altitudes — §91.119</h3>
+<div class="tablewrap"><table>
+<tr><th>Area</th><th>Rule Summary</th></tr>
+<tr><td>Anywhere</td><td>An altitude allowing an emergency landing without undue hazard to persons or property if power fails.</td></tr>
+<tr><td>Congested area</td><td>At least 1,000 ft above the highest obstacle within a 2,000-ft horizontal radius.</td></tr>
+<tr><td>Other than congested</td><td>At least 500 ft above the surface.</td></tr>
+<tr><td>Open water / sparsely populated</td><td>At least 500 ft away from any person, vessel, vehicle or structure.</td></tr>
+</table></div>
+<h3>VFR Cruising Altitudes — §91.159</h3>
+<div class="cols-2">
+<div class="subcard"><h4>Magnetic Course 0°–179°</h4><p>Odd-thousand-foot MSL altitude + 500 ft, when the rule applies above 3,000 ft AGL.</p></div>
+<div class="subcard"><h4>Magnetic Course 180°–359°</h4><p>Even-thousand-foot MSL altitude + 500 ft, when the rule applies above 3,000 ft AGL.</p></div>
+</div>
+<h3>Cross-Country Planning Sequence</h3>
+<ol>
+<li>Determine route, terrain and airspace; avoid prohibited/restricted areas as appropriate.</li>
+<li>Choose clearly identifiable checkpoints and note suitable airports and emergency landing options.</li>
+<li>Determine true course, distance and magnetic variation for each leg.</li>
+<li>Select altitudes considering direction of flight, terrain, airspace, winds and aircraft performance.</li>
+<li>Record communications frequencies, traffic patterns, NOTAMs and airport information.</li>
+<li>Obtain current weather; compute wind-correction angle, groundspeed, ETE and fuel burn.</li>
+<li>Use POH performance data for takeoff, climb, cruise and landing planning.</li>
+<li>Review fuel availability, diversion triggers and alternatives.</li>
+</ol>
+</div>
+</section>
+
+
+<section class="reference-section" id="weather-products">
+  <div class="section-head">
+    <div class="section-num">07</div>
+    <div><h2>Weather Products & Briefings</h2><p>A compact decode and briefing reference from METAR/TAF through advisories and prognostic products.</p></div>
+  </div>
+  <div class="section-body">
+<h3>METAR — Routine Terminal Observation</h3>
+<div class="code">METAR KJFK 121651Z 22015G25KT 10SM -RA FEW020 OVC050 25/17 A2985 RMK AO2</div>
+<div class="tablewrap"><table>
+<tr><th>Group</th><th>Meaning</th></tr>
+<tr><td>KJFK</td><td>Station identifier</td></tr><tr><td>121651Z</td><td>12th day, 1651 Zulu</td></tr><tr><td>22015G25KT</td><td>Wind from 220° at 15 kt, gusting 25 kt</td></tr><tr><td>10SM</td><td>10 statute miles visibility</td></tr><tr><td>-RA</td><td>Light rain</td></tr><tr><td>FEW020 OVC050</td><td>Few 2,000 ft AGL; overcast 5,000 ft AGL</td></tr><tr><td>25/17</td><td>Temperature 25°C / dew point 17°C</td></tr><tr><td>A2985</td><td>Altimeter 29.85 inHg</td></tr><tr><td>RMK AO2</td><td>Automated station with precipitation sensor</td></tr>
+</table></div>
+<h3>TAF — Terminal Aerodrome Forecast</h3>
+<p>Forecast for an airport area, commonly valid 24 or 30 hours. Important change groups in the guides include <strong>FM</strong> for a new prevailing condition beginning at a stated time, <strong>TEMPO</strong> for temporary conditions, and probability groups where issued.</p>
+<h3>PIREP</h3>
+<div class="code">UA/UUA /OV /TM /FL /TP /SK /WX /TA /WV /TB /IC /RM</div>
+<p>Actual in-flight weather from pilots. Groups describe report type, location, time, altitude, aircraft type, sky, weather, temperature, wind, turbulence, icing and remarks.</p>
+<h3>Winds & Temperatures Aloft</h3>
+<ul><li>Wind direction encoded in tens of degrees true.</li><li><strong>9900</strong> = light/variable wind less than 5 kt.</li><li>Special encoding is used for winds over 100 kt; temperatures above 24,000 ft are shown as negative without a minus sign.</li></ul>
+<h3>Weather Briefing Types</h3>
+<div class="tablewrap"><table>
+<tr><th>Briefing</th><th>Use</th></tr>
+<tr><td>Standard</td><td>Complete weather picture when you have not already received all pertinent information.</td></tr>
+<tr><td>Abbreviated</td><td>Update or supplement a previous briefing, or request specific information.</td></tr>
+<tr><td>Outlook</td><td>Planning for a departure six or more hours in the future.</td></tr>
+<tr><td>Inflight</td><td>Weather/flight-information update while airborne.</td></tr>
+</table></div>
+<h3>Standard Briefing Elements</h3>
+<p>Adverse conditions • “VFR Flight Not Recommended” when applicable • synopsis • current conditions • en route forecast • destination forecast • ATC delays • winds aloft • NOTAMs.</p>
+<h3>AIRMET / SIGMET / Convective SIGMET</h3>
+<div class="tablewrap"><table>
+<tr><th>Product</th><th>Primary Study Cue</th></tr>
+<tr><td>AIRMET Sierra</td><td>IFR conditions and mountain obscuration.</td></tr>
+<tr><td>AIRMET Tango</td><td>Moderate turbulence, sustained strong surface winds and low-level wind shear.</td></tr>
+<tr><td>AIRMET Zulu</td><td>Moderate icing and freezing-level information.</td></tr>
+<tr><td>SIGMET</td><td>Severe non-convective weather hazardous to all aircraft, such as severe icing or severe/extreme turbulence.</td></tr>
+<tr><td>Convective SIGMET</td><td>Significant convective hazards such as embedded/line thunderstorms, severe thunderstorm winds, hail or tornadoes.</td></tr>
+</table></div>
+<h3>Prognostic Charts</h3>
+<p><strong>Surface Prog:</strong> pressure systems, fronts, precipitation and general weather. <strong>Low-Level SIGWX:</strong> broad VFR/MVFR/IFR areas plus significant low-altitude hazards, icing/turbulence and freezing-level information.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="weather-theory">
+  <div class="section-head">
+    <div class="section-num">08</div>
+    <div><h2>Weather Theory & Hazards</h2><p>Know what creates the weather, what it looks like, and what it does to the airplane.</p></div>
+  </div>
+  <div class="section-body">
+<div class="cols-2">
+<div class="subcard"><h3>Pressure Systems</h3><ul><li><strong>High:</strong> generally clockwise circulation, sinking air, more stable/clear conditions.</li><li><strong>Low:</strong> generally counterclockwise circulation, rising air, more cloud/precipitation and instability.</li></ul></div>
+<div class="subcard"><h3>Standard Lapse / Pressure Rule of Thumb</h3><ul><li>Temperature decreases about 2°C per 1,000 ft.</li><li>Pressure decreases about 1 inHg per 1,000 ft in the common study approximation.</li></ul></div>
+</div>
+<h3>Fronts</h3>
+<div class="tablewrap"><table><tr><th>Front</th><th>Typical Study Cue</th></tr>
+<tr><td>Warm</td><td>Stratiform clouds, reduced visibility, widespread precipitation.</td></tr>
+<tr><td>Cold</td><td>More abrupt lifting, towering cumulus/thunderstorms possible, generally better visibility behind.</td></tr>
+<tr><td>Stationary</td><td>Little movement; mixed warm/cold-front characteristics.</td></tr>
+<tr><td>Occluded</td><td>Complex weather; potentially significant/severe conditions.</td></tr>
+</table></div>
+<h3>Cloud Naming</h3>
+<p>Cumulus = heaped/puffy • Stratus = layered • Cirrus = high/wispy • Nimbus = rain-bearing • Lenticular = lens-shaped mountain-wave cloud. Height prefixes include <strong>alto-</strong> for middle cloud and <strong>cirro-</strong> for high cloud.</p>
+<h3>Thunderstorms</h3>
+<div class="cols-3">
+<div class="subcard"><h4>Ingredients</h4><p>Moisture • unstable lapse rate • lifting action.</p></div>
+<div class="subcard"><h4>Stages</h4><p>Cumulus: updrafts • Mature: updrafts + downdrafts • Dissipating: downdrafts dominate.</p></div>
+<div class="subcard"><h4>Hazards</h4><p>Turbulence • microbursts/wind shear • hail • lightning • icing • heavy precipitation.</p></div>
+</div>
+<h3>Icing</h3>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td>Clear</td><td>Smooth/transparent, associated with larger supercooled droplets and slower freezing.</td></tr>
+<tr><td>Rime</td><td>Rough, milky/opaque ice from rapid freezing of smaller droplets.</td></tr>
+<tr><td>Mixed</td><td>Combination of clear and rime characteristics.</td></tr>
+<tr><td>Frost</td><td>Ice-crystal deposit on a cold surface; must be removed from critical airfoil surfaces before takeoff.</td></tr>
+</table></div>
+<p>Performance effects emphasized in the guides: increased weight and drag, reduced lift/wing efficiency, and reduced propeller/engine effectiveness.</p>
+<h3>Fog</h3>
+<p><strong>Radiation:</strong> ground cools moist air • <strong>Advection:</strong> warm moist air moves over a colder surface • <strong>Steam:</strong> cold dry air moves over warmer water • <strong>Upslope:</strong> moist air is forced upslope and cools.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="airspace">
+  <div class="section-head">
+    <div class="section-num">09</div>
+    <div><h2>National Airspace System & VFR Minimums</h2><p>Entry, weather minimums, equipment and special-use airspace in one place.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Airspace Entry / Equipment Quick Table</h3>
+<div class="tablewrap"><table>
+<tr><th>Class</th><th>VFR Entry</th><th>Equipment / Pilot Cue</th></tr>
+<tr><td>A</td><td>IFR clearance only</td><td>IFR-equipped aircraft and instrument-qualified pilot.</td></tr>
+<tr><td>B</td><td>ATC clearance required; hear “cleared into the Bravo”</td><td>Two-way radio; transponder/altitude reporting and ADS-B where required; pilot-qualification rules apply.</td></tr>
+<tr><td>C</td><td>Two-way radio communications established before entry; ATC must acknowledge callsign</td><td>Two-way radio and transponder/altitude reporting; ADS-B where required.</td></tr>
+<tr><td>D</td><td>Two-way radio communications established before entry</td><td>Two-way radio.</td></tr>
+<tr><td>E</td><td>No communication requirement for basic VFR entry</td><td>Equipment rules depend on location/operation.</td></tr>
+<tr><td>G</td><td>Uncontrolled</td><td>No specific VFR entry communication requirement.</td></tr>
+</table></div>
+<h3>Basic VFR Weather Minimums — §91.155</h3>
+<div class="tablewrap"><table>
+<tr><th>Airspace / Altitude</th><th>Visibility</th><th>Cloud Clearance</th></tr>
+<tr><td>Class B</td><td>3 SM</td><td>Clear of clouds</td></tr>
+<tr><td>Class C, D, E below 10,000 ft MSL</td><td>3 SM</td><td>500 below / 1,000 above / 2,000 horizontal</td></tr>
+<tr><td>Class E at/above 10,000 ft MSL</td><td>5 SM</td><td>1,000 below / 1,000 above / 1 SM horizontal</td></tr>
+<tr><td>Class G at/below 1,200 ft AGL — day</td><td>1 SM</td><td>Clear of clouds</td></tr>
+<tr><td>Class G at/below 1,200 ft AGL — night</td><td>3 SM</td><td>500 / 1,000 / 2,000</td></tr>
+<tr><td>Class G above 1,200 ft AGL and below 10,000 MSL — day</td><td>1 SM</td><td>500 / 1,000 / 2,000</td></tr>
+<tr><td>Class G above 1,200 ft AGL and below 10,000 MSL — night</td><td>3 SM</td><td>500 / 1,000 / 2,000</td></tr>
+<tr><td>Class G at/above 10,000 ft MSL</td><td>5 SM</td><td>1,000 / 1,000 / 1 SM</td></tr>
+</table></div>
+<h3>Mode C / ADS-B Study Areas</h3>
+<ul><li>Within the 30-NM Mode C veil around listed Class B primary airports.</li><li>Within and above Class C airspace as specified by the regulations.</li><li>At and above 10,000 ft MSL in the contiguous U.S., excluding airspace at/below 2,500 ft AGL.</li><li>Specified Gulf of Mexico airspace at and above 3,000 ft MSL within 12 NM of the U.S. coast.</li></ul>
+<h3>Special VFR</h3>
+<p>ATC clearance allowing VFR operation in controlled surface airspace when normal VFR surface weather minimums are not met. The source guide summarizes the weather minimum as <strong>1 SM and clear of clouds</strong>; night SVFR requires the applicable instrument pilot/equipment qualifications.</p>
+<h3>Special Use / Other Airspace</h3>
+<div class="tablewrap"><table>
+<tr><th>Area</th><th>Quick Reference</th></tr>
+<tr><td>Prohibited</td><td>No flight except as authorized for national security/welfare reasons.</td></tr>
+<tr><td>Restricted</td><td>Hazardous activity; authorization required when active.</td></tr>
+<tr><td>MOA</td><td>Military training; VFR permitted but caution strongly advised.</td></tr>
+<tr><td>Alert</td><td>High volume/unusual activity; all pilots share responsibility for collision avoidance.</td></tr>
+<tr><td>Warning</td><td>Potentially hazardous activity over international waters.</td></tr>
+<tr><td>NSA</td><td>Avoidance requested for security; may become temporarily prohibited via NOTAM.</td></tr>
+<tr><td>TFR</td><td>Temporary restriction found through NOTAMs.</td></tr>
+<tr><td>SFRA</td><td>Special flight rules/procedures apply.</td></tr>
+<tr><td>TRSA</td><td>Optional radar services associated with some terminal areas.</td></tr>
+</table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="sectional">
+  <div class="section-head">
+    <div class="section-num">10</div>
+    <div><h2>Sectional Chart Quick Reference</h2><p>Read the airport data block, then airspace floors/ceilings, terrain/obstacles, SUA and route features.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Airport Symbol & Data Block</h3>
+<div class="tablewrap"><table>
+<tr><th>Chart Item</th><th>Meaning</th></tr>
+<tr><td>Blue airport symbol</td><td>Towered airport.</td></tr>
+<tr><td>Magenta airport symbol</td><td>Nontowered airport.</td></tr>
+<tr><td>CT / frequency</td><td>Control-tower frequency; a star can indicate part-time operation.</td></tr>
+<tr><td>“C” by tower frequency</td><td>Tower frequency is also CTAF when the tower is closed.</td></tr>
+<tr><td>ATIS</td><td>ATIS frequency shown in airport data.</td></tr>
+<tr><td>Airport elevation</td><td>Field elevation in feet MSL.</td></tr>
+<tr><td>Runway length</td><td>Longest runway commonly shown in hundreds of feet; usable length may differ.</td></tr>
+<tr><td>Tick marks</td><td>Fuel available.</td></tr>
+<tr><td>“RP” notation</td><td>Right-hand traffic for listed runway(s).</td></tr>
+</table></div>
+<h3>Airspace Depictions</h3>
+<ul><li><strong>Dashed blue:</strong> Class D surface area.</li><li><strong>Solid magenta:</strong> Class C.</li><li><strong>Solid blue:</strong> Class B.</li><li><strong>Dashed magenta:</strong> Class E to the surface.</li><li><strong>Magenta vignette:</strong> Class E begins at 700 ft AGL inside the shaded transition area.</li><li>Where not otherwise designated, Class E commonly begins at 1,200 ft AGL with Class G below.</li></ul>
+<h3>Maximum Elevation Figure (MEF)</h3>
+<p>Shows the highest terrain/obstacle elevation in a quadrangle with charting allowance. The last two zeros are omitted, so <strong>12⁵</strong> represents 12,500 ft MSL.</p>
+<h3>Obstacle Elevations</h3>
+<p>Obstacle labels commonly show the top elevation in MSL, with the AGL height in parentheses beneath it.</p>
+<h3>Class B / C Shelf Numbers</h3>
+<p>Stacked numbers show ceiling and floor in hundreds of feet MSL. Example: <strong>125/70</strong> represents a shelf from 7,000 ft MSL up to 12,500 ft MSL.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="navigation">
+  <div class="section-head">
+    <div class="section-num">11</div>
+    <div><h2>Navigation, VOR, GPS & Lost Procedures</h2><p>Definitions and formulas that connect the sectional chart to what the airplane actually flies.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Navigation Definitions</h3>
+<div class="tablewrap"><table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Pilotage</td><td>Navigation using visual landmarks.</td></tr>
+<tr><td>Dead Reckoning</td><td>Navigation by heading, wind, groundspeed, time and distance from a known position.</td></tr>
+<tr><td>True Course (TC)</td><td>Intended ground track referenced to true north.</td></tr>
+<tr><td>Magnetic Course (MC)</td><td>True course corrected for magnetic variation.</td></tr>
+<tr><td>Wind Correction Angle (WCA)</td><td>Angle applied to offset wind drift.</td></tr>
+<tr><td>Heading</td><td>Direction the aircraft nose points.</td></tr>
+<tr><td>Track</td><td>Actual path over the ground.</td></tr>
+</table></div>
+<div class="code">TC ± Variation = MC
+MC ± WCA = Magnetic Heading
+Magnetic Heading ± Deviation = Compass Heading</div>
+<h3>Magnetic Compass Errors</h3>
+<div class="cols-2"><div class="mnemonic"><b>UNOS</b><span>Undershoot North • Overshoot South</span></div><div class="mnemonic"><b>ANDS</b><span>Accelerate North • Decelerate South</span></div></div>
+<p>Also remember <strong>deviation</strong> from aircraft magnetic fields, <strong>variation</strong> between true and magnetic north, magnetic dip, and oscillation in turbulence.</p>
+<h3>VOR Basics</h3>
+<ul><li>A VOR radial is a magnetic bearing <strong>FROM</strong> the station.</li><li>The aircraft can be on the same radial regardless of heading.</li><li>Course-deviation interpretation depends on selected course and TO/FROM indication.</li><li>Using the 1-in-60 concept, 1° of angular error is approximately 1 NM at 60 NM.</li></ul>
+<h3>GPS</h3>
+<ul><li>GPS position uses satellite signals; a 3-D solution requires sufficient satellite geometry/signals.</li><li><strong>RAIM:</strong> receiver integrity monitoring.</li><li><strong>WAAS:</strong> augmentation using ground-reference corrections to improve accuracy/integrity.</li></ul>
+<h3>Lost Procedures — 5 C's</h3>
+<div class="mnemonic"><b>5 C's</b><span>Confess • Climb • Conserve • Communicate • Comply</span></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="communication">
+  <div class="section-head">
+    <div class="section-num">12</div>
+    <div><h2>Radio Communication, ATC, Transponder & Light Gun</h2><p>Who to call, what common facility names mean, and the core VFR radio-failure memory items.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Common Facilities</h3>
+<div class="tablewrap"><table>
+<tr><th>Facility</th><th>Function</th></tr>
+<tr><td>ATIS</td><td>Recorded airport/weather/operational information.</td></tr>
+<tr><td>AWOS / ASOS</td><td>Automated weather information.</td></tr>
+<tr><td>Ground</td><td>Controls movement-area taxi operations at towered airports.</td></tr>
+<tr><td>Tower</td><td>Controls runway, takeoff, landing and local traffic operations.</td></tr>
+<tr><td>Approach / Departure / Center</td><td>Radar services, sequencing and traffic advisories for IFR and participating VFR aircraft.</td></tr>
+<tr><td>FSS</td><td>Flight Service for flight-plan and weather services.</td></tr>
+<tr><td>UNICOM</td><td>Airport/FBO advisory and service information; not ATC.</td></tr>
+<tr><td>CTAF</td><td>Common traffic frequency used at nontowered airports or when tower is closed.</td></tr>
+</table></div>
+<h3>Transponder Codes</h3>
+<div class="cols-4"><div class="metric"><strong>1200</strong><span>VFR</span></div><div class="metric"><strong>7500</strong><span>Unlawful interference / hijack</span></div><div class="metric"><strong>7600</strong><span>Lost communications</span></div><div class="metric"><strong>7700</strong><span>Emergency</span></div></div>
+<h3>VFR Radio Failure Study Sequence</h3>
+<ol><li><strong>Aviate, navigate, communicate.</strong></li><li>Troubleshoot radio, headset, audio panel and frequency selection.</li><li>Avoid creating a greater hazard; remain clear of controlled surface areas unless entry is necessary/authorized by circumstances.</li><li>Use 7600 when appropriate and monitor 121.5 if receiving capability remains.</li><li>At a towered airport, look for light-gun signals.</li></ol>
+<h3>Light Gun Signals</h3>
+<div class="tablewrap"><table>
+<tr><th>Signal</th><th>Aircraft on Ground</th><th>Aircraft in Flight</th></tr>
+<tr><td>Steady green</td><td>Cleared for takeoff</td><td>Cleared to land</td></tr>
+<tr><td>Flashing green</td><td>Cleared to taxi</td><td>Return for landing</td></tr>
+<tr><td>Steady red</td><td>Stop</td><td>Give way to other aircraft and continue circling</td></tr>
+<tr><td>Flashing red</td><td>Taxi clear of runway / landing area</td><td>Airport unsafe — do not land</td></tr>
+<tr><td>Flashing white</td><td>Return to starting point on airport</td><td>N/A</td></tr>
+<tr><td>Alternating red / green</td><td>Exercise extreme caution</td><td>Exercise extreme caution</td></tr>
+</table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="airport">
+  <div class="section-head">
+    <div class="section-num">13</div>
+    <div><h2>Airport Signs, Markings, Lights & Runway Safety</h2><p>A visual-memory section for surface operations and runway-incursion prevention.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Airport Signs</h3>
+<div class="tablewrap"><table>
+<tr><th>Sign Type</th><th>Appearance / Meaning</th></tr>
+<tr><td>Mandatory instruction</td><td>Red background with white inscription; runway entrance, hold position, prohibited areas.</td></tr>
+<tr><td>Location</td><td>Black background with yellow inscription; identifies your current taxiway/runway location.</td></tr>
+<tr><td>Direction</td><td>Yellow background with black inscription/arrows; direction to intersecting taxiway/runway.</td></tr>
+<tr><td>Destination</td><td>Yellow/black directional information leading to runways, terminals or airport services.</td></tr>
+<tr><td>Information</td><td>Information such as frequencies or special procedures.</td></tr>
+<tr><td>Runway distance remaining</td><td>Black sign with white number showing thousands of feet remaining.</td></tr>
+</table></div>
+<h3>Airport Markings</h3>
+<div class="tablewrap"><table>
+<tr><th>Marking</th><th>Meaning</th></tr>
+<tr><td>Displaced threshold</td><td>Area before threshold may be usable for takeoff/taxi but not touchdown in the displaced direction.</td></tr>
+<tr><td>Blast pad / stopway</td><td>Not for normal landing, takeoff or taxi.</td></tr>
+<tr><td>Runway hold-short lines</td><td>Boundary between taxiway and protected runway area; ATC clearance required to cross at a towered airport.</td></tr>
+<tr><td>Taxiway edge — continuous</td><td>Crossing is not permitted.</td></tr>
+<tr><td>Taxiway edge — dashed</td><td>Crossing is permitted.</td></tr>
+<tr><td>ILS critical-area boundary</td><td>Marks protected ILS area.</td></tr>
+<tr><td>Non-movement area boundary</td><td>Separates ATC-controlled movement area from non-movement area.</td></tr>
+<tr><td>Enhanced taxiway centerline</td><td>Warns that a runway hold-short line is ahead.</td></tr>
+</table></div>
+<h3>Runway & Taxiway Lights</h3>
+<div class="cols-2">
+<div class="subcard"><h4>Runway</h4><ul><li>REIL: two synchronized flashing white lights at runway threshold/end identification.</li><li>Runway edge: white; instrument-runway edge lights transition to amber near the far end.</li><li>Centerline: white, then alternating red/white, then red near the end.</li><li>LAHSO: flashing white hold-short lights.</li></ul></div>
+<div class="subcard"><h4>Taxiway</h4><ul><li>Edge lights: blue.</li><li>Centerline lights: green.</li><li>Lead-on / lead-off: alternating yellow and green.</li></ul></div>
+</div>
+<h3>Runway Incursion Avoidance</h3>
+<ul><li>Stop at hold lines and obtain required clearance before crossing a runway.</li><li>Maintain a sterile cockpit during taxi, takeoff and landing.</li><li>Know your position and use the airport diagram.</li><li>Ask ATC for clarification or progressive taxi if unsure.</li><li>Pay special attention to published hot spots.</li></ul>
+<h3>Wake Turbulence</h3>
+<p>Wingtip vortices are strongest behind aircraft that are <strong>heavy, clean and slow</strong>. For takeoff behind a larger aircraft, rotate before its rotation point and remain upwind/above its path. For landing, remain above its approach path and land beyond its touchdown point when appropriate.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="aerodynamics">
+  <div class="section-head">
+    <div class="section-num">14</div>
+    <div><h2>Aerodynamics, Turns, Stalls & Stability</h2><p>The detailed concepts behind the oral-exam questions: force balance, angle of attack, load factor, left-turning tendencies, stall and stability.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Four Forces</h3>
+<div class="cols-4"><div class="metric"><strong>Lift</strong><span>Upward aerodynamic force.</span></div><div class="metric"><strong>Weight</strong><span>Gravity acting downward.</span></div><div class="metric"><strong>Thrust</strong><span>Forward propulsive force.</span></div><div class="metric"><strong>Drag</strong><span>Rearward aerodynamic resistance.</span></div></div>
+<h3>Airfoil & Angle of Attack</h3>
+<p><strong>Angle of attack (AoA)</strong> is the angle between the wing chord line and the relative wind. A stall occurs when the <strong>critical AoA</strong> is exceeded, regardless of indicated airspeed, pitch attitude or power setting.</p>
+<h3>Drag</h3>
+<div class="cols-2"><div class="subcard"><h4>Parasite Drag</h4><p>Drag caused by the airplane moving through the air; increases as speed increases.</p></div><div class="subcard"><h4>Induced Drag</h4><p>Byproduct of lift; most significant at low airspeeds and high AoA.</p></div></div>
+<h3>Turns, Load Factor & Stall Speed</h3>
+<p>Banking tilts the lift vector. In a level turn, total lift must increase so the vertical component still supports weight. Increasing bank angle therefore increases load factor and raises stall speed. The study guides use a 60° bank as the classic example of a 2-G level turn.</p>
+<h3>Slip vs. Skid</h3>
+<div class="tablewrap"><table><tr><th>Condition</th><th>Study Cue</th></tr>
+<tr><td>Slip</td><td>Turn rate is insufficient for the bank; horizontal lift exceeds the turn's outward tendency.</td></tr>
+<tr><td>Skid</td><td>Turn rate is excessive for the bank; especially hazardous near stall because yaw can contribute to spin entry.</td></tr>
+</table></div>
+<h3>Four Left-Turning Tendencies</h3>
+<ol><li><strong>Torque:</strong> propeller rotation produces an opposite rolling tendency.</li><li><strong>Gyroscopic precession:</strong> force applied to a rotating propeller/gyro manifests approximately 90° ahead in the direction of rotation; most noticeable in certain pitch changes and tailwheel operations.</li><li><strong>Spiraling slipstream:</strong> propwash spirals around the fuselage and strikes the vertical tail, yawing the airplane left.</li><li><strong>P-factor:</strong> at high AoA the descending propeller blade develops greater thrust, yawing the nose left.</li></ol>
+<h3>Stall Situations</h3>
+<ul><li><strong>Power-off / approach stall:</strong> increasing AoA as airspeed is reduced until critical AoA is exceeded.</li><li><strong>Power-on / departure stall:</strong> critical AoA can be exceeded during high-power, high-pitch conditions.</li><li><strong>Turning / accelerated stall:</strong> higher load factor increases the airspeed at which the critical AoA may be reached.</li></ul>
+<h3>Aircraft Stability</h3>
+<div class="tablewrap"><table><tr><th>Type</th><th>Positive</th><th>Neutral</th><th>Negative</th></tr>
+<tr><td>Static stability</td><td>Initial tendency back toward equilibrium</td><td>Initial tendency to remain displaced</td><td>Initial tendency away from equilibrium</td></tr>
+<tr><td>Dynamic stability</td><td>Oscillations decrease with time</td><td>Oscillations remain constant</td><td>Oscillations increase/diverge</td></tr></table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="performance">
+  <div class="section-head">
+    <div class="section-num">15</div>
+    <div><h2>Performance, Airspeeds, Altitudes & V-Speeds</h2><p>Definitions first; aircraft-specific numbers always come from the current POH/AFM.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Airspeed Types</h3>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Definition</th></tr>
+<tr><td>IAS</td><td>Indicated airspeed shown by the airspeed indicator.</td></tr>
+<tr><td>CAS</td><td>IAS corrected for instrument and position error.</td></tr>
+<tr><td>EAS</td><td>CAS corrected for compressibility error.</td></tr>
+<tr><td>TAS</td><td>EAS/CAS corrected for nonstandard pressure and temperature; actual speed through the air.</td></tr>
+<tr><td>Groundspeed</td><td>Actual speed across the ground after wind effect.</td></tr>
+<tr><td>Mach</td><td>Ratio of true airspeed to local speed of sound.</td></tr>
+</table></div>
+<h3>Altitude Types</h3>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Definition</th></tr>
+<tr><td>Indicated altitude</td><td>Altimeter reading with the selected pressure setting.</td></tr>
+<tr><td>Pressure altitude</td><td>Altitude above the standard datum plane / indicated with 29.92 inHg set.</td></tr>
+<tr><td>Density altitude</td><td>Pressure altitude corrected for nonstandard temperature; “performance altitude.”</td></tr>
+<tr><td>True altitude</td><td>Actual height above mean sea level.</td></tr>
+<tr><td>Absolute altitude</td><td>Height above the ground.</td></tr>
+</table></div>
+<div class="code">Pressure Altitude ≈ Field Elevation + (29.92 − Altimeter Setting) × 1000</div>
+<h3>Density Altitude Effects</h3>
+<p>Higher density altitude reduces engine power, propeller efficiency and wing performance, increasing takeoff distance and reducing climb capability.</p>
+<h3>Common V-Speeds</h3>
+<div class="tablewrap"><table>
+<tr><th>Symbol</th><th>Meaning</th></tr>
+<tr><td>VSO</td><td>Stall speed in landing configuration.</td></tr>
+<tr><td>VS1</td><td>Stall speed in a specified configuration, commonly clean.</td></tr>
+<tr><td>VX</td><td>Best angle of climb — most altitude for horizontal distance.</td></tr>
+<tr><td>VY</td><td>Best rate of climb — most altitude per unit time.</td></tr>
+<tr><td>VFE</td><td>Maximum flap-extended speed.</td></tr>
+<tr><td>VA</td><td>Design maneuvering speed; decreases as aircraft weight decreases.</td></tr>
+<tr><td>VNO</td><td>Maximum structural cruising speed.</td></tr>
+<tr><td>VNE</td><td>Never-exceed speed.</td></tr>
+<tr><td>VG</td><td>Best glide / maximum lift-to-drag concept.</td></tr>
+<tr><td>VREF</td><td>Reference final-approach speed where defined.</td></tr>
+</table></div>
+<h3>Airspeed Indicator Markings</h3>
+<div class="arc-row"><span class="arc white"></span><b>White arc:</b> flap operating range &nbsp; <span class="arc green"></span><b>Green:</b> normal operating &nbsp; <span class="arc yellow"></span><b>Yellow:</b> caution / smooth air &nbsp; <span class="arc red"></span><b>Red line:</b> VNE</div>
+<h3>General Speed Restrictions — §91.117 Study Cues</h3>
+<ul><li>250 KIAS below 10,000 ft MSL unless a lower restriction applies.</li><li>200 KIAS at/below 2,500 ft AGL within 4 NM of the primary airport of Class C or D airspace.</li><li>200 KIAS under a Class B shelf or through a VFR corridor through Class B.</li></ul>
+</div>
+</section>
+
+
+<section class="reference-section" id="systems">
+  <div class="section-head">
+    <div class="section-num">16</div>
+    <div><h2>Flight Controls, Engine, Propeller & Electrical Systems</h2><p>System knowledge should always be tied back to the specific airplane POH, but these are the core Private Pilot concepts in the uploaded guides.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Primary & Secondary Flight Controls</h3>
+<div class="tablewrap"><table>
+<tr><th>Control</th><th>Axis / Function</th></tr>
+<tr><td>Ailerons</td><td>Roll about the longitudinal axis.</td></tr>
+<tr><td>Elevator / Stabilator</td><td>Pitch about the lateral axis.</td></tr>
+<tr><td>Rudder</td><td>Yaw about the vertical axis.</td></tr>
+<tr><td>Flaps</td><td>Increase lift and drag; reduce stall speed and permit steeper/slower approach configurations.</td></tr>
+<tr><td>Trim</td><td>Relieves control pressure and allows a trimmed condition to be maintained with less force.</td></tr>
+</table></div>
+<h3>Four-Stroke Engine Cycle</h3>
+<div class="flow compact"><div><b>1</b><span>Intake</span></div><div><b>2</b><span>Compression</span></div><div><b>3</b><span>Power</span></div><div><b>4</b><span>Exhaust</span></div></div>
+<h3>Magnetos & Ignition</h3>
+<ul><li>Magnetos generate ignition energy independently of the aircraft electrical system.</li><li>They operate while the crankshaft is rotating.</li><li>A broken/disconnected magneto grounding (“P-lead”) circuit can leave a magneto hot even with the ignition switch OFF; treat the propeller as potentially live.</li></ul>
+<h3>Fuel-Air Mixture</h3>
+<p>Mixture is the ratio of fuel mass to air mass in the combustible mixture. The guides emphasize correct leaning with altitude/cruise operation and note that excessively rich mixtures at low power can promote spark-plug fouling.</p>
+<h3>Detonation vs. Preignition</h3>
+<div class="cols-2">
+<div class="subcard"><h4>Detonation</h4><p>Abnormal explosive combustion after normal ignition. Contributing factors in the guides include improper fuel grade and high-power/lean or high-manifold-pressure/low-RPM combinations.</p></div>
+<div class="subcard"><h4>Preignition</h4><p>Fuel-air mixture ignites before the normal spark event, commonly from a hot spot or glowing deposit. Can cause roughness, loss of power and high operating temperature.</p></div>
+</div>
+<h3>Propellers</h3>
+<p><strong>Fixed pitch:</strong> blade angle is fixed by design. <strong>Constant speed:</strong> governor automatically changes blade angle to maintain selected RPM; pilot typically has throttle and propeller controls.</p>
+<h3>Electrical System</h3>
+<p>Engine-driven alternator/generator powers electrical loads and charges the battery; the battery can provide temporary backup power if generation is lost. The exact bus, voltage and failure indications are aircraft-specific.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="instruments">
+  <div class="section-head">
+    <div class="section-num">17</div>
+    <div><h2>Flight Instruments, Pitot-Static, Gyros & Glass Cockpit</h2><p>Know what powers each instrument and how a blocked pressure source changes the indications.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Pitot-Static System</h3>
+<div class="tablewrap"><table>
+<tr><th>Instrument</th><th>Uses</th><th>Basic Principle</th></tr>
+<tr><td>Airspeed Indicator</td><td>Pitot + static</td><td>Measures difference between ram-air and ambient static pressure.</td></tr>
+<tr><td>Altimeter</td><td>Static</td><td>Aneroid wafers respond to static-pressure changes relative to the selected barometric reference.</td></tr>
+<tr><td>VSI</td><td>Static</td><td>Measures rate of static-pressure change through a calibrated leak; indication has inherent lag.</td></tr>
+</table></div>
+<h3>Failure Cues</h3>
+<div class="tablewrap"><table>
+<tr><th>Condition</th><th>ASI</th><th>Altimeter</th><th>VSI</th></tr>
+<tr><td>Pitot inlet blocked, drain open</td><td>Reads toward zero</td><td>Normal</td><td>Normal</td></tr>
+<tr><td>Pitot inlet + drain blocked</td><td>Acts like an altimeter / changes with altitude</td><td>Normal</td><td>Normal</td></tr>
+<tr><td>Static port blocked</td><td>Erroneous; tends to under-read in climb and over-read in descent</td><td>Freezes</td><td>Reads zero</td></tr>
+</table></div>
+<h3>Gyroscopic Principles</h3>
+<p><strong>Rigidity in space</strong> — a spinning gyro resists changes to its plane. <strong>Precession</strong> — a force applied to a gyro manifests approximately 90° later in the direction of rotation.</p>
+<h3>Traditional Instruments</h3>
+<ul><li>Attitude indicator: pitch and bank.</li><li>Heading indicator / directional gyro: stabilized heading reference; periodically aligned with the magnetic compass in traditional installations.</li><li>Turn coordinator: rate of turn and rate of roll; commonly electrically powered.</li></ul>
+<h3>Magnetic Compass</h3>
+<p>Deviation • variation • dip/turn errors (UNOS) • acceleration errors (ANDS). “High to low, look out below” is the common altimeter-pressure/temperature study reminder.</p>
+<h3>Glass Cockpit</h3>
+<div class="tablewrap"><table>
+<tr><th>Component</th><th>Function</th></tr>
+<tr><td>AHRS</td><td>Solid-state attitude/heading information using gyros/accelerometers/magnetometers.</td></tr>
+<tr><td>ADC</td><td>Computes airspeed, altitude and vertical-speed data from pitot/static/temperature inputs.</td></tr>
+<tr><td>PFD</td><td>Primary flight information display.</td></tr>
+<tr><td>MFD</td><td>Navigation, engine/system, weather, traffic and terrain information depending on installation.</td></tr>
+</table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="night-fuel-o2">
+  <div class="section-head">
+    <div class="section-num">18</div>
+    <div><h2>Night Definitions, VFR Fuel & Supplemental Oxygen</h2><p>Three different time references appear in night operations; keep them separate.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Three “Night” References</h3>
+<div class="tablewrap"><table>
+<tr><th>Purpose</th><th>Time Reference</th></tr>
+<tr><td>Logging night flight</td><td>End of evening civil twilight to beginning of morning civil twilight.</td></tr>
+<tr><td>Passenger landing currency</td><td>1 hour after sunset to 1 hour before sunrise; required landings are full stop.</td></tr>
+<tr><td>Position / anti-collision lights</td><td>Sunset to sunrise.</td></tr>
+</table></div>
+<h3>VFR Minimum Fuel — §91.151</h3>
+<div class="cols-2"><div class="metric"><strong>30 min</strong><span>Day: after reaching the first point of intended landing, at normal cruise.</span></div><div class="metric"><strong>45 min</strong><span>Night: after reaching the first point of intended landing, at normal cruise.</span></div></div>
+<h3>Supplemental Oxygen — §91.211</h3>
+<div class="tablewrap"><table>
+<tr><th>Cabin Pressure Altitude</th><th>Requirement</th></tr>
+<tr><td>Above 12,500 through 14,000 ft MSL</td><td>Required minimum flight crew must use oxygen for portions exceeding 30 minutes.</td></tr>
+<tr><td>Above 14,000 ft MSL</td><td>Required minimum flight crew must use oxygen continuously while above that altitude.</td></tr>
+<tr><td>Above 15,000 ft MSL</td><td>Each occupant must be provided supplemental oxygen.</td></tr>
+</table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="adm">
+  <div class="section-head">
+    <div class="section-num">19</div>
+    <div><h2>Aeronautical Decision-Making & Risk Management</h2><p>Use structured tools to identify risk early and resist external-pressure traps.</p></div>
+  </div>
+  <div class="section-body">
+<div class="cols-2">
+<div class="mnemonic"><b>IMSAFE</b><span>Illness • Medication • Stress • Alcohol • Fatigue • Emotion / Eating</span></div>
+<div class="mnemonic"><b>PAVE</b><span>Pilot • Aircraft • enVironment • External Pressures</span></div>
+<div class="mnemonic"><b>DECIDE</b><span>Detect • Estimate • Choose • Identify • Do • Evaluate</span></div>
+<div class="mnemonic"><b>5P</b><span>Plan • Plane • Pilot • Passengers • Programming</span></div>
+</div>
+<h3>Hazardous Attitudes & Antidotes</h3>
+<div class="tablewrap"><table>
+<tr><th>Attitude</th><th>Typical Thought</th><th>Antidote</th></tr>
+<tr><td>Anti-authority</td><td>“Don’t tell me what to do.”</td><td>Follow the rules; they are usually right.</td></tr>
+<tr><td>Impulsivity</td><td>“Do something quickly.”</td><td>Not so fast — think first.</td></tr>
+<tr><td>Invulnerability</td><td>“It won’t happen to me.”</td><td>It can happen to me.</td></tr>
+<tr><td>Macho</td><td>“I can do it.”</td><td>Taking unnecessary chances is foolish.</td></tr>
+<tr><td>Resignation</td><td>“What’s the use?”</td><td>I am not helpless; I can make a difference.</td></tr>
+</table></div>
+</div>
+</section>
+
+
+<section class="reference-section" id="human-factors">
+  <div class="section-head">
+    <div class="section-num">20</div>
+    <div><h2>Aeromedical Factors & Illusions</h2><p>Recognize symptoms early, use instruments when sensations conflict, and do not let physiology become an aircraft-control problem.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Hypoxia</h3>
+<p>Insufficient oxygen reaching body tissues. Symptoms in the guides include headache, dizziness, euphoria, impaired judgment and cyanosis. Corrective action: use oxygen when available/appropriate and descend to a lower altitude.</p>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Meaning</th></tr>
+<tr><td>Hypoxic</td><td>Not enough oxygen available to the body, such as at altitude.</td></tr>
+<tr><td>Hypemic</td><td>Blood cannot carry enough oxygen, such as with carbon-monoxide exposure.</td></tr>
+<tr><td>Stagnant</td><td>Oxygen-rich blood is not circulating adequately.</td></tr>
+<tr><td>Histotoxic</td><td>Cells cannot effectively use oxygen, such as with alcohol/drugs.</td></tr>
+</table></div>
+<h3>Hyperventilation</h3>
+<p>Excessive breathing reduces carbon dioxide in the blood and can cause dizziness, tingling, light-headedness and symptoms resembling hypoxia. Slow breathing and regain a controlled breathing rate; if uncertain, the source guides emphasize treating the condition conservatively as possible hypoxia.</p>
+<h3>Carbon Monoxide</h3>
+<p>Colorless, odorless, tasteless combustion gas. Symptoms include headache, nausea, drowsiness and impaired judgment. In a light airplane, an exhaust/cabin-heat leak is a classic concern; ventilate and land as soon as practical if CO exposure is suspected.</p>
+<h3>Spatial Disorientation & Illusions</h3>
+<div class="tablewrap"><table>
+<tr><th>Illusion</th><th>What It Feels Like / Risk</th></tr>
+<tr><td>Leans</td><td>After an unnoticed turn, level flight may feel like a turn in the opposite direction.</td></tr>
+<tr><td>Coriolis</td><td>Head movement during a prolonged turn can create a powerful false sensation of rotation on another axis.</td></tr>
+<tr><td>Graveyard Spiral</td><td>Loss of turn sensation leads the pilot to pull back while still banked, tightening a descending spiral.</td></tr>
+<tr><td>Somatogravic</td><td>Acceleration feels nose-up; deceleration feels nose-down.</td></tr>
+<tr><td>Inversion</td><td>Level-off after a climb may feel like tumbling backward.</td></tr>
+<tr><td>Elevator illusion</td><td>Vertical acceleration can be interpreted as a pitch change.</td></tr>
+<tr><td>Autokinesis</td><td>A stationary light appears to move after prolonged staring at night.</td></tr>
+<tr><td>False horizon</td><td>Sloping clouds/lights or other visual features are mistaken for the real horizon.</td></tr>
+<tr><td>Black-hole approach</td><td>Dark, featureless approach environment can cause a dangerously low approach.</td></tr>
+<tr><td>Runway width / slope</td><td>Unusual width or slope can distort perceived approach height/angle.</td></tr>
+</table></div>
+<div class="callout blue"><strong>Antidote:</strong> when visual/vestibular sensations disagree with reliable flight instruments, use the instruments and disciplined scan rather than body sensations.</div>
+<h3>Alcohol — §91.17 Study Cue</h3>
+<p>The source guides highlight the familiar minimum “8 hours bottle to throttle,” BAC less than 0.04%, and no acting as a crewmember while under the influence or impaired.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="ntsb">
+  <div class="section-head">
+    <div class="section-num">21</div>
+    <div><h2>NTSB Accident / Incident Quick Reference</h2><p>The NTSB is separate from the FAA and has its own reporting definitions and requirements.</p></div>
+  </div>
+  <div class="section-body">
+<h3>Accident vs. Incident — NTSB Part 830</h3>
+<div class="cols-2">
+<div class="subcard"><h4>Aircraft Accident</h4><p>An occurrence associated with aircraft operation in which a person suffers death or serious injury, or the aircraft receives substantial damage, within the definition provided by NTSB rules.</p></div>
+<div class="subcard"><h4>Aircraft Incident</h4><p>An occurrence other than an accident associated with aircraft operation that affects or could affect operational safety.</p></div>
+</div>
+<h3>Serious Injury — Examples in the Guides</h3>
+<ul><li>Hospitalization for more than 48 hours beginning within 7 days of the injury.</li><li>Specified fractures other than simple fractures of fingers, toes or nose.</li><li>Severe hemorrhage or nerve/muscle/tendon damage.</li><li>Internal-organ injury.</li><li>Specified second- or third-degree burns or burns covering more than 5% of the body.</li></ul>
+<h3>Substantial Damage</h3>
+<p>Damage/failure adversely affecting structural strength, performance or flight characteristics and normally requiring major repair/replacement of the affected component, subject to the full NTSB definition and exclusions.</p>
+</div>
+</section>
+
+
+<section class="reference-section" id="mnemonics">
+  <div class="section-head">
+    <div class="section-num">22</div>
+    <div><h2>Mnemonic & Memory-Aid Index</h2><p>Use these as recall prompts, then verify the full regulation, POH/AFM, checklist or FAA source.</p></div>
+  </div>
+  <div class="section-body">
+<div class="mn-grid">
+<div class="mnemonic"><b>ARROW</b><span>Aircraft documents</span></div>
+<div class="mnemonic"><b>AV1ATES / AAV1ATE</b><span>Maintenance inspection reminders</span></div>
+<div class="mnemonic"><b>A TOMATO FLAMES</b><span>VFR day equipment</span></div>
+<div class="mnemonic"><b>FLAPS</b><span>Additional VFR night equipment</span></div>
+<div class="mnemonic"><b>NWKRAFT</b><span>Preflight planning information</span></div>
+<div class="mnemonic"><b>IMSAFE</b><span>Pilot self-assessment</span></div>
+<div class="mnemonic"><b>PAVE</b><span>Risk categories</span></div>
+<div class="mnemonic"><b>DECIDE</b><span>Decision-making process</span></div>
+<div class="mnemonic"><b>5P</b><span>Plan • Plane • Pilot • Passengers • Programming</span></div>
+<div class="mnemonic"><b>5 C's</b><span>Lost procedures</span></div>
+<div class="mnemonic"><b>UNOS</b><span>Undershoot North • Overshoot South</span></div>
+<div class="mnemonic"><b>ANDS</b><span>Accelerate North • Decelerate South</span></div>
+<div class="mnemonic"><b>3-152</b><span>3 SM • 500 below • 1,000 above • 2,000 horizontal</span></div>
+</div>
+</div>
+</section>
+
+
+<section class="reference-section" id="rapid-review">
+  <div class="section-head">
+    <div class="section-num">23</div>
+    <div><h2>Rapid Review Questions</h2><p>Use these as an oral-review prompt. Click each question to reveal the answer.</p></div>
+  </div>
+  <div class="section-body">
+<div class="qa">
+<details><summary>What are the three different “night” time references?</summary><p>Logging: end of evening civil twilight to beginning of morning civil twilight. Passenger landing currency: 1 hour after sunset to 1 hour before sunrise. Required position/anti-collision lights: sunset to sunrise.</p></details>
+<details><summary>What does “cleared into the Bravo” mean?</summary><p>It is the explicit ATC clearance required before VFR entry into Class B airspace; two-way communication alone is not sufficient.</p></details>
+<details><summary>What is the difference between a course, heading and track?</summary><p>Course is the intended ground path; heading is where the nose points; track is the actual ground path.</p></details>
+<details><summary>Why does stall speed increase in a level turn?</summary><p>More total lift is required to keep the vertical lift component equal to weight, increasing load factor; the higher load factor increases stall speed.</p></details>
+<details><summary>What happens with a blocked static port?</summary><p>The altimeter freezes, VSI reads zero, and the airspeed indicator becomes erroneous.</p></details>
+<details><summary>What are the four left-turning tendencies?</summary><p>Torque, gyroscopic precession, spiraling slipstream and P-factor.</p></details>
+<details><summary>What does NWKRAFT stand for?</summary><p>NOTAMs, Weather, Known traffic delays, Runway lengths, Alternatives, Fuel requirements, Takeoff/landing performance.</p></details>
+<details><summary>What is the VFR-day fuel reserve?</summary><p>Enough to reach the first intended landing point, then fly for at least 30 minutes at normal cruise. At night, 45 minutes.</p></details>
+<details><summary>What are the four transponder codes every Private Pilot should recognize?</summary><p>1200 VFR, 7500 unlawful interference, 7600 lost communications, 7700 emergency.</p></details>
+<details><summary>What does a VOR radial represent?</summary><p>A magnetic bearing FROM the VOR station.</p></details>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer><div class="foot"><strong>Study / planning aid.</strong> For flight operations, verify current FAA regulations and guidance, current charts/NOTAMs/weather, and the approved POH/AFM and aircraft-specific documents.</div></footer>
+
+<script>
+function jumpToSection(id){
+  if(!id)return;
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function searchSections(){
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  document.querySelectorAll('.reference-section').forEach(sec=>{
+    sec.classList.toggle('hidden-by-search', q && !sec.innerText.toLowerCase().includes(q));
+  });
+}
+
+function enforceNewTabLinks(){
+  document.querySelectorAll('a[href]').forEach(a=>{
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+  });
+}
+document.addEventListener('DOMContentLoaded', enforceNewTabLinks);
+
+</script>
+</body>
+</html>
